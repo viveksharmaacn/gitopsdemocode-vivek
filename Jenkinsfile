@@ -22,7 +22,7 @@ node {
 
     stage('Push image') {
         
-        docker.withRegistry('https://hub.docker.com/repositories/viveksharmaacn', 'vivs-gitops2') {
+        docker.withRegistry('https://registry.hub.docker.com', 'vivs-gitops2') {
             app.push("${env.BUILD_NUMBER}")
         }
     }
